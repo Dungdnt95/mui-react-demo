@@ -1,0 +1,42 @@
+export const mockDataTeam = [
+    {
+        id: 1,
+        name: "Jon Snow",
+        email: "jonsnow@gmail.com",
+        age: 35,
+        phone: "(665)121-5454",
+        access: "admin",
+    },
+    {
+        id: 2,
+        name: "Jon Snow 2",
+        email: "jonsnow2@gmail.com",
+        age: 35,
+        phone: "(665)121-5454",
+        access: "manager",
+    },
+    {
+        id: 3,
+        name: "Jon Snow 3",
+        email: "jonsnow3@gmail.com",
+        age: 35,
+        phone: "(665)121-5454",
+        access: "manager",
+    },
+    {
+        id: 4,
+        name: "Jon Snow 4",
+        email: "jonsnow4@gmail.com",
+        age: 35,
+        phone: "(665)121-5454",
+        access: "manager",
+    },
+    {
+        id: 5,
+        name: "Jon Snow 5",
+        email: "jonsnow5@gmail.com",
+        age: 35,
+        phone: "(665)121-5454",
+        access: "manager",
+    },
+];
