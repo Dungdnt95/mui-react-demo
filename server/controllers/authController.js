@@ -1,10 +1,5 @@
-import { db } from "../models/index.js";
-import bcrypt from "bcryptjs";
 import { userSingnUp, userSingnIn } from "../service/authService.js";
 
-const User = db.user;
-const Role = db.role;
-const Op = db.Sequelize.Op;
 
 const signup = async (req, res) => {
   try {
