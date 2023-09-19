@@ -1,4 +1,4 @@
 const secret = {
-  secret: "bezkoder-secret-key",
+  secret: "dungnt-secret-key",
 };
 export { secret };
