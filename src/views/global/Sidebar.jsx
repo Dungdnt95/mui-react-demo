@@ -31,6 +31,7 @@ const Sidebar = () => {
   const [isCollapsed, setIsCollapsed] = useState(false);
   const [selected, setSelected] = useState("Dashboard");
   const listMenu = MENU;
+  const user = JSON.parse(localStorage.getItem("user"));
   return (
     <Box
       sx={{
@@ -97,7 +98,7 @@ const Sidebar = () => {
                   fontWeight="bold"
                   sx={{ m: "10px 0 0 0" }}
                 >
-                  Mr. Dung
+                  {user.name}
                 </Typography>
                 <Typography variant="h5" color={colors.greenAccent[500]}>
                   VP Fancy Admin
