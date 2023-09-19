@@ -1,6 +1,7 @@
 CREATE TABLE `users` (
     `id` INT(11) NOT NULL auto_increment,
     `name` VARCHAR(255) NOT NULL,
+    `email` VARCHAR(255) NOT NULL,
     `password` VARCHAR(255) NOT NULL,
     `tokens` VARCHAR(255) NULL,
     `last_login` DATETIME NULL DEFAULT CURRENT_TIMESTAMP,
