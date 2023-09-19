@@ -29,7 +29,7 @@ const userSingnUp = async (data) => {
       } else {
         await user.setRoles([1]);
       }
-      return { success: true, message: "User was registered successfully!" };
+      return { success: true, message: "User was registered successfully!",status:200 };
     }
   } catch (error) {
     console.log(`userSingnIn has error: ${error.message}`);
@@ -43,9 +43,10 @@ const userSingnUp = async (data) => {
 
 const userSingnIn = async (data) => {
   try {
+    console.log(data);
     let user = await User.findOne({
       where: {
-        email: req.body.email,
+        email: data.email,
       },
     });
     if (!user) {
@@ -65,7 +66,7 @@ const userSingnIn = async (data) => {
         data: {},
       };
     }
-    const token = jwt.sign({ id: user.id }, secret, {
+    const token = jwt.sign({ id: user.id }, secret.secret, {
       algorithm: "HS256",
       allowInsecureKeySizes: true,
       expiresIn: 86400, // 24 hours

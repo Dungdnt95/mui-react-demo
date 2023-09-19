@@ -5,12 +5,13 @@ const signup = async (req, res) => {
   try {
     const result = await userSingnUp(req.body);
     const { message, success, status } = result;
+    console.log(status);
     res.status(status).send({
       success,
       message,
     });
   } catch (error) {
-    res.status(500).send({ message: err.message });
+    res.status(500).send({ message: error.message });
   }
 };
 
@@ -24,7 +25,7 @@ const signin = async (req, res) => {
       data,
     });
   } catch (error) {
-    res.status(500).send({ message: err.message });
+    res.status(500).send({ message: error.message });
   }
 };
 
