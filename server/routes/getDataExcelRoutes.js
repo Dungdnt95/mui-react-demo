@@ -3,7 +3,7 @@ const getDataExcelRoutes = (app) => {
   app.get("/api/test-execl", getData);
 };
 const getData = (req, res) => {
-  const file = reader.readFile("../assets/kew.xlsx");
+  const file = reader.readFile("./assets/kew.xlsx");
   let data = [];
   const sheets = file.SheetNames;
   for (let i = 0; i < sheets.length; i++) {

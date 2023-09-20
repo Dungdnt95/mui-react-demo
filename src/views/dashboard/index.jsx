@@ -1,11 +1,18 @@
 import Chart from "chart.js/auto";
 import { CategoryScale } from "chart.js";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Data } from "../../data/mockChartData";
 import PieChart from "../../components/PieChart";
+import { getDataExecl } from "../../api/getDataChartApi.js";
+
 Chart.register(CategoryScale);
 
 const Dashboard = () => {
+  useEffect(() => {
+    getDataExecl().then((data) => {
+      console.log(data);
+    });
+  }, []);
   const [chartData, setChartData] = useState({
     labels: Data.map((data) => data.year),
     datasets: [
@@ -19,7 +26,7 @@ const Dashboard = () => {
           "#f3ba2f",
           "#2a71d0",
           "#66CC00",
-          "#9019AE"
+          "#9019AE",
         ],
       },
     ],
