@@ -14,13 +14,13 @@ function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
-  useEffect(() => {
-    const result = checkUserToken();
-    setIsLoggedIn(result);
-    let pathName =
-      (!["/sing-in"].includes(location.pathname) && !result) ? "/sing-in" : "/";
-    navigate(pathName);
-  }, [isLoggedIn]);
+  // useEffect(() => {
+  //   const result = checkUserToken();
+  //   setIsLoggedIn(result);
+  //   let pathName =
+  //     (!["/sing-in"].includes(location.pathname) && !result) ? "/sing-in" : "/";
+  //   navigate(pathName);
+  // }, [isLoggedIn]);
 
   return (
     <ColorModeContext.Provider value={colorMode}>
