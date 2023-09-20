@@ -4,11 +4,12 @@ import "dotenv/config";
 import { db } from "./models/index.js";
 import { userRoutes } from "./routes/userRoutes.js";
 import { authRoutes } from "./routes/authRoutes.js";
+import { getDataExcelRoutes } from "./routes/getDataExcelRoutes.js";
 
 const app = express();
-var corsOptions = {
-  origin: process.env.ORIGIN,
-};
+// var corsOptions = {
+//   origin: process.env.ORIGIN,
+// };
 const Role = db.role;
 
 // db.sequelize.sync({ force: true }).then(() => {
@@ -32,6 +33,7 @@ const Role = db.role;
 //   });
 // };
 
+
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -44,6 +46,7 @@ app.use(function (req, res, next) {
 });
 userRoutes(app);
 authRoutes(app);
+getDataExcelRoutes(app);
 // set port, listen for requests
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
