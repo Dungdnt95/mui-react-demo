@@ -26,7 +26,7 @@ function App() {
     <ColorModeContext.Provider value={colorMode}>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        {isLoggedIn ? (
+        {/* {!isLoggedIn ? ( */}
           <div className="app">
             <Sidebar isSidebar={isSidebar} />
             <main className="content">
@@ -36,11 +36,11 @@ function App() {
               </Routes>
             </main>
           </div>
-        ) : (
-          <Routes>
-            <Route path="/sing-in" element={<SignInSide />} />
-          </Routes>
-        )}
+        // ) : (
+        //   <Routes>
+        //     <Route path="/sing-in" element={<SignInSide />} />
+        //   </Routes>
+        // )}
       </ThemeProvider>
     </ColorModeContext.Provider>
   );
