@@ -10,7 +10,7 @@ Chart.register(CategoryScale);
 const Dashboard = () => {
   useEffect(() => {
     getDataExecl().then((data) => {
-      console.log(data);
+      console.log(data.data);
     });
   }, []);
   const [chartData, setChartData] = useState({

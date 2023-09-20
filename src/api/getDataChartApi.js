@@ -9,7 +9,7 @@ const getDataExecl = async () => {
     }
     return {
       success: true,
-      message: result.data.data,
+      data: result.data.data,
     };
   } catch (error) {
     console.log(error.message);
