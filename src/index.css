@@ -40,3 +40,7 @@ body,
 .sign-in button{
   background: #0000FF!important;;
 }
+.dashboard {
+  width: 30%;
+  margin: 0 auto;
+}
